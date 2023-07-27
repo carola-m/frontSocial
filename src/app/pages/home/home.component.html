@@ -1,0 +1,95 @@
+
+  <!-- Carousel start -->
+
+  <div class="banner">
+    <div class="banner-content">
+      <div class="text-banner">
+        <h1>¿Desarrollador Junior? <br>Este es tu sitio</h1>
+        <p>Sube tus proyectos y compartelos con tu comunidad</p>
+      </div>
+      <button routerLink="/register">Registrate ahora</button>
+    </div>
+  </div>
+
+    <!-- Carousel ends -->
+    
+
+    <!--seccion proyectos-->
+
+<div class="proyects-section">
+      <div class="title-section">
+          <h1 ><strong>Últimos proyectos subidos</strong></h1>
+      </div>
+
+  <div class="row row-cols-1 row-cols-md-4 g-4 ms-2 me-2">
+    <div *ngFor="let project of userProjectsList" class="col mb-4">
+      <div class="card">
+        <img [src]="project.imagen" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{project.name}}</h5>
+          <p class="card-text">{{project.description}}</p>
+          <a href="#" routerLink="/projects/{{project._id}}" class="
+          btn btn-outline-warning">Ver proyecto</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!--seccion noticias-->
+  <div class="news-section">
+      <div class="news-title">
+          <h1><strong>Noticias</strong></h1>
+      </div>
+      <div class="row row-cols-1 row-cols-md-4 g-4 ms-2 me-2 ">
+        <div *ngFor="let news of listNoticias; let i=index " >
+          <div  *ngIf="i< 5" class="card">
+            <a [href]="news.url" target="_blank" class="
+              card">
+                <img [src]="news.urlToImage" class="card-img-top" >
+                <div class="card-body">
+                  <h5 class="card-title">{{news.title}}</h5>
+                  <a [href]="news.url" target="_blank" class="
+                  btn btn-outline-warning">Leer la noticia</a>
+                </div>
+              </a>
+          </div>
+        </div> 
+      </div>
+  </div>
+  <!---Seccion perfiles start--> <!---Seccion perfiles start-->
+<div class="profile-section">
+  <div class="text-profile">
+    <h1>Nuevos perfiles incorporados...</h1>
+  </div>
+  <div class="cards-profile">
+    <div *ngFor="let profile of userProfileList" class="flip-card  mb-4">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img [src]="profile.imagen" alt="Avatar" style="width:300px;height:300px;">
+          <h1>{{profile.name}} {{profile.lastname}}</h1>
+          <p>Full Stack Developer Junior</p>
+        </div>
+        <div class="flip-card-back">
+          <p><i>{{profile.description}}</i></p>
+          <div class="social-icons">
+            
+            <i class="fa-brands fa-github fa-xl" style="color: #000000;"><a href='{{profile.enlaceGit}}'></a></i>
+            <i class="fa-brands fa-linkedin-in fa-xl" style="color: #000000;"><a href='{{profile.enlaceLinkedin}}'></a></i>
+            
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div></div>
+    
+    
+  </div>
+</div>
+
+
+
+
+

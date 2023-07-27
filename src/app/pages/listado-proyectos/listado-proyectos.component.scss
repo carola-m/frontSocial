@@ -1,0 +1,40 @@
+.container{
+  max-width: 100%;
+}
+
+.row{
+  background-color: #212529;
+}
+
+.title-section {
+  margin-left: 25px;
+  margin-bottom: 25px;
+  color: white;
+  padding-top: 25px;
+}
+  
+.card-body {
+  background-color: #6C757D;
+  color: white;
+}
+  
+.cards-section{
+  display: grid;
+}
+  
+.card{
+  margin-top: 30px;
+}
+  
+.news-section{
+  // margin-left: 25px;
+  // margin-bottom: 25px;
+  background-color: #212529;
+  padding-bottom: 25px;
+}
+  
+.news-title{
+  color: white;
+  margin-left: 25px;
+  margin-bottom: 15px;
+}

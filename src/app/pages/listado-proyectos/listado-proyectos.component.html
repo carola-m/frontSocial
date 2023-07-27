@@ -1,0 +1,13 @@
+<div class="row row-cols-1 row-cols-md-4 g-4 ps-3 pe-3">
+  <div *ngFor="let project of userProjectsList " class="col mb-4">
+    <div class="card">
+      <img [src]="project.imagen" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{project.name}}</h5>
+        <p class="card-text">{{project.description}}</p>
+        <a href="#" routerLink="/projects/{{project._id}}" class="
+          btn btn-outline-warning">Ver proyecto</a>
+      </div>
+    </div>
+  </div>
+</div>

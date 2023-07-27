@@ -1,0 +1,25 @@
+<!-- <div class="card mb-5 mt-5 container text-center " style="width: 50rem; ">
+    <div class="row align-items-center "> -->
+<div class="project-unique">
+    <div  class="text-white card  bg-secondary container" style="max-width: 840px;">
+        <div class="row no-gutters">
+            <div class="col-md-4 mt-3 mb-3">
+                <img [src]="projectData.imagen"
+                    class="card-img" alt="...">
+            </div>
+            <div class="col-md-8 mt-5">
+                <div class="card-body">
+                    <h5 class="card-title container text-center ">{{projectData.name}}</h5>
+                    <h5 class="container text-center fs-6">{{projectData.idUser.name}} {{projectData.idUser.lastname}}</h5>
+                    <p class="card-text text-center m-1">{{projectData.description}}</p>
+                    <div class="container text-center ">
+                        <a href='{{projectData.enlaceGit}}' target="_blank"><input  class=" btn btn-outline-warning" type="submit" value="Git"></a>
+                        <a href='{{projectData.enlaceProyecto}}' target="_blank"><input  class="btn btn-outline-warning m-4" type="reset" value="Proyecto" ></a>
+                        <a href='/projects'><input  class=" btn btn-outline-warning"  type="submit"  value="Volver" ></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

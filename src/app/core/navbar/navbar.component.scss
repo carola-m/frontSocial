@@ -1,0 +1,36 @@
+* {
+    background-color: black;
+  }
+  
+  .nav-link {
+    color: white;
+  }
+  
+  .logo {
+    cursor: pointer;
+  }
+  
+  .navbar-toggler {
+    background-color: white;
+  }
+  
+  .navbar-toggler-icon {
+    background-color: white;
+  }
+  
+  .nav-item:hover {
+    transform: scale(1.00);
+    overflow: hidden;
+    border: 1.2px solid yellow;
+  }
+  
+  .welcome-text {
+    color: yellow;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+
+
+  

@@ -1,0 +1,90 @@
+<!-- Section: Design Block -->
+<section class="overflow-hidden" style="background-image: url('../../../assets/register\ 2.jpg')">
+
+  <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5 bg-glass-transparent">
+    <div class="row gx-lg-5 align-items-center mb-5">
+      <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
+        <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsla(0, 0%, 98%, 0.938)">
+          Area de registro <br/>
+
+        </h1>
+      
+        <p class="mb-4 opacity-70" style="color: hsl(220, 100%, 99%)">
+          Regístrate en Developers Social para formar parte de la comunidad de Developers Junior y asi poder tanto compartir tus proyectos como acceder a otros proyectos que te ayuden a crecer
+        </p>
+      </div>
+
+      <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+        <div class="card bg-glass-transparent">
+          <div class="card-body px-4 py-5 px-md-5">
+              <form [formGroup]="registerForm"(ngSubmit)="onSubmit()" >
+                <!-- 2 column grid layout with text inputs for the first and last names -->
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" formControlName="name" class="form-control" />
+                      <label class="form-label" for="name" style="color: hsla(0, 0%, 98%, 0.938)">Nombre</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" formControlName="lastname" class="form-control" />
+                      <label class="form-label" for="lastname" style="color: hsla(0, 0%, 98%, 0.938)">Apellidos</label>
+                    </div>
+                  </div>
+                </div>
+  
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                  <input type="email" formControlName="email" class="form-control" />
+                  <label class="form-label" for="email" style="color: hsla(0, 0%, 98%, 0.938)">Email</label>
+                </div>
+  
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                  <input type="password" formControlName="password" class="form-control" />
+                  <label class="form-label" for="password" style="color: hsla(0, 0%, 98%, 0.938)">Password</label>
+                </div>
+  
+                <!-- Checkbox -->
+                <div class="form-check d-flex justify-content-center mb-4">
+                  <input class="form-check-input me-2" type="checkbox" value="" formControlName="addnews" checked />
+                  <label class="form-check-label" for="form2Example33" style="color: hsla(0, 0%, 98%, 0.938)">
+                    Suscribete para recibir novedades
+                  </label>
+                </div>
+  
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-dark btn-block mb-4" style="color: hsla(0, 0%, 98%, 0.938)">
+                  Registrarse
+                </button>
+  
+                <!-- Register buttons -->
+                <!-- <div class="text-center" style="color: hsla(0, 0%, 98%, 0.938)">
+                  <p>También puedes iniciar sesión con:</p>
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                    <i class="fab fa-facebook text-white"></i>
+                  </button>
+                
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                    <i class="fab fa-google text-white"></i>
+                  </button>
+                
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                    <i class="fab fa-twitter text-white"></i>
+                  </button>
+                
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                    <i class="fab fa-github text-white"></i>
+                  </button>
+                </div> -->
+                
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section: Design Block -->
+

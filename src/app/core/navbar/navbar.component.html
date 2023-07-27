@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <img class="logo" routerLink="/" src="../../../assets/Social.jpg" alt="logo">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/projects">Listado de proyectos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/listadoUsuarios">Listado de usuarios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/news">Noticias</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/mensajes">Tablón Mensajes</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <p class="nav-link welcome-text" *ngIf="authApi.getToken()">Bienvenid@ {{authApi.getNombre()}}!</p>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav d-flex align-items-center">
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="authApi.getToken()" routerLink="/areaPersonal">Area Personal</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="!authApi.getToken()" routerLink="/register">Regístrate</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="!authApi.getToken()" routerLink="/login">Login</a>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link logout-button" *ngIf="authApi.getToken()" (click)="logout()">Logout</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

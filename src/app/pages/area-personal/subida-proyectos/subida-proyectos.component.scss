@@ -1,0 +1,64 @@
+.projectContainer {
+   // display: flex;
+   // flex-direction: row;
+   justify-content: start;
+   --opacidad-negro: 0.5;
+   background-image: linear-gradient(rgba(0, 0, 1, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))),url("../../../../assets/perfil.jpg");
+   background-size: cover;
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-color: black;
+}
+
+.projectDiv {
+   width: 80%;
+   gap: 10px;
+   padding: 10px;
+   color: white;
+   text-align: left;
+}
+
+h2{
+   text-align: left;
+   padding-bottom: 30px;
+}
+ 
+input, textarea{
+   border:2px solid yellow;
+   border-radius: 3%;
+}
+
+.boton{
+   text-align:center;
+   text-decoration: none;
+  //  display: flex;
+  //  flex-wrap: wrap;
+   justify-content: center;
+   background-color: yellow;
+   padding: 10px;
+   white-space: nowrap;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+   margin: 15px 5px;
+   -webkit-transition: all 0.2s ease-in-out;
+   -ms-transition: all 0.2s ease-in-out;
+   -moz-transition: all 0.2s ease-in-out;
+   -o-transition: all 0.2s ease-in-out;
+   transition: all 0.2s ease-in-out;
+   width: 150px;
+}
+
+.botonFlex{
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.boton:hover{
+  background-color: rgba(203, 221, 10, 0.883);
+}
+
+ 
+
+

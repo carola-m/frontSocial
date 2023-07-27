@@ -1,0 +1,84 @@
+
+
+.caja{
+  background-color:#212529;
+    color: white;
+    display:flex ;
+    justify-content: center;
+    padding: 5rem;
+}
+
+.padre{
+   border-radius: 1rem;
+    background-color:#6C757D;
+    width: 28.2rem;
+   height: fit-content;
+   padding-bottom: 10px;
+}
+
+.foto{
+    border-radius: 1rem 1rem 0rem 0rem;
+    padding: 2rem;
+    background-color:#6c757d93 ;
+    display: flex;
+    justify-content: center;
+    border-bottom: 0.2rem solid #FFC107;
+}
+
+.fotoPerfil{
+    border: 0.1rem solid #FFC107 ;
+    border-radius: 0.7rem;
+    width: 15rem;
+}
+
+.box-nombre{
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+.profesion {
+display: flex;
+justify-content: center;
+}
+.email{
+    font-size: small;
+    display: flex;
+    justify-content: center; 
+    color: #FFC107;
+}
+.box-description{
+   
+    display: flex;
+  margin:20px;
+    text-align: center;
+}
+
+.botones{
+   
+    display: flex;
+    justify-content: center;
+    gap:2rem;
+
+}
+
+.boton{
+    border-radius: 0.3rem;
+    border: 0.1rem solid  #FFC107;
+    background: transparent;
+    color: white;
+   
+}
+
+.boton a {
+ text-decoration: none;
+  color: #FFC107;; 
+}
+
+.boton:hover{
+   
+background-color: #FFC107;
+}
+
+.boton a:hover{
+    color:black ;
+}

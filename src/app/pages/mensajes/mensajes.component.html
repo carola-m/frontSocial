@@ -1,0 +1,34 @@
+<div class="profileContainer">
+  <div class="msjFormDiv">
+    <form [formGroup]="mensajeForm" (ngSubmit)="onSubmit()" >
+      <label for="title">Titulo:</label><br>
+      <input type="text" formControlName="title" [(ngModel)]="titleM"><br><br>
+      <p *ngIf="(submitted && mensajeForm?.get('title')?.hasError('required'))">Este campo es requerido</p>
+
+      <label for="textomsj">Descripción:</label><br>
+      <textarea formControlName="textomsj" [(ngModel)]="textomsjM" rows="5" cols="40" ></textarea><br><br>
+      <p *ngIf="(submitted && mensajeForm?.get('textomsj')?.hasError('required'))">Este campo es requerido</p>
+
+      <div class="buttons d-flex justify-content-left">
+        <input class="boton"  type="submit" value="Grabar">
+      </div>
+    </form>
+  </div>
+
+  <div class="list-section" *ngIf="mensajeList">
+    <div *ngFor="let item of mensajeList" class="padre">
+      <div class="texto">
+        <div class="titulo">
+          <h5>{{item.title}}</h5>
+          <p class="box-texto">{{item.textomsj}}</p>
+          <p class="box-texto-mail">{{item.email}}</p>
+        </div>
+        <div class="box-button">
+          <button (click)="borrarMensaje(item._id)">borrar</button> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  

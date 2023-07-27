@@ -1,0 +1,47 @@
+<div class="profileContainer">
+  <div class="profileDiv">
+    <h2>Complete su perfil</h2>
+    <form [formGroup]="perfilForm" (ngSubmit)="onSubmit()" >
+      <label for="name">Nombre:</label>
+      <input type="text" formControlName="name" [(ngModel)]="nameF"><br><br>
+      <p *ngIf="(submitted && perfilForm?.get('name')?.hasError('required'))">Este campo es requerido</p>
+
+      <label for="lastname">Apellido:</label>
+      <input type="text" formControlName="lastname" [(ngModel)]="lastnameF" rows="5" ><br><br>
+      <p *ngIf="(submitted && perfilForm?.get('lastname')?.hasError('required'))">Este campo es requerido</p>
+
+      <label for="imagen">Foto:</label>
+      <input type="file" formControlName="imagen"  [(ngModel)]="imagenF" accept="image/*" (change)="onFileSelected($event)"><br><br>
+
+      <label for="mail">E-mail:</label>
+      <input type="email" formControlName="email" [(ngModel)]="emailF" ><br><br>
+      <p *ngIf="(submitted && perfilForm?.get('email')?.hasError('required'))">Este campo es requerido</p>
+
+      <label for="description">Descripción:</label><br>
+      <textarea formControlName="description" [(ngModel)]="descriptionF" rows="5" cols="40" ></textarea><br><br>
+      <p *ngIf="(submitted && perfilForm?.get('description')?.hasError('required'))">Este campo es requerido</p>
+
+      <label for="enlaceGit">Enlace a Git:</label>
+      <input type="url" formControlName="enlaceGit" [(ngModel)]="enlaceGitF"><br><br>
+
+      <label for="enlaceLinkedin">Enlace a LinkedIn:</label>
+      <input type="url" formControlName="enlaceLinkedin" [(ngModel)]="enlaceLinkedinF"><br><br>
+
+      <div class="buttons d-flex justify-content-left" *ngIf="!perfilApi.getUserProfile()">
+        <input class="boton"  type="submit"  value="Enviar">
+        <input routerLink="/areaPersonal" class="boton"  type="submit" value="Atrás">
+      </div>
+    </form>
+  </div>
+  <div *ngIf="perfilApi.getUserProfile()" class="profileContainer botonFlex">
+    <button class="boton"  (click) = "updateUser()" >Modificar</button>
+    <button class="boton"  (click) = "deleteUser()" >Eliminar</button>
+    <input routerLink="/areaPersonal" class="boton"  type="submit" value="Atrás">
+  </div>
+  <div>
+    <!-- Previsualizacion de los datos     -->
+    
+      <!-- <p>Foto: <img src={{foto_proyecto.value}} alt='logo'> </p> -->
+  </div>
+</div>
+

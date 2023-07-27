@@ -1,0 +1,60 @@
+<div class="personal-area">
+    <div class="wellcome-banner">
+        <h1>Bienvenido a tu area personal</h1>
+    </div>
+    <p></p>
+
+    <div class="content-area"> 
+        <div class="profile-area" *ngIf="this.perfilApi.getUserProfile()" >
+            <div class="pic">
+                <img [src]="this.UserDetail.imagen" alt="Avatar" >
+            </div>
+            <div class="profile-detail">
+                <h1>{{this.UserDetail.name}} {{this.UserDetail.lastname}}</h1>
+                <p>{{this.UserDetail.description}}</p>
+            </div>
+        </div>
+        <div class="edit-area mb-4">
+            <div class="edit-profile">
+                <div class="text-profile">
+                    <h3>Edita tu perfil</h3>
+                    <p>Puedes editar tu perfil para mantener tu informacion actualizada</p>
+                </div>
+                <div class="button-area">
+                    <button class="btn btn-warning" routerLink="/perfil">Editar perfil</button>
+                </div>
+            </div>
+            <div class="edit-profile">
+                <div class="text-profile">
+                    <h3>Sube tu proyecto</h3>
+                    <p>Entra aqui para subir tu proyecto y asi compartirlo con toda la comunidad de Desarrolladores</p>
+                </div>
+                <div class="button-area">
+                    <button class="btn btn-warning" *ngIf="this.perfilApi.getUserProfile()"
+                        (click)="subirProject()">Subir proyecto</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="list-section" *ngIf="projectList">
+        <div class="title-projects">
+            <h1>Proyectos subidos </h1>
+        </div>
+        <div *ngFor="let item of projectList" class="padre">
+            <div class="foto">
+                <img class="fotoPerfil" [src]="item.imagen" alt={{item.name}}>
+            </div>
+            <div class="texto">
+                <div class="box-texto">
+                    <h5>{{item.name}}</h5>
+                </div>
+                <div class="box-button">
+                    <button routerLink="/projects/{{item._id}}">Ver proyecto</button>
+                </div>
+                <div class="button-edit">
+                    <button (click)="editarProject(item._id)">Editar proyecto</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

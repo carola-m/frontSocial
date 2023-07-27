@@ -1,0 +1,228 @@
+
+.personal-area{
+  background-color: #212529;
+}
+
+.wellcome-banner{
+    background-image: url('https://media.istockphoto.com/id/865457032/vector/abstract-futuristic-cyberspace-with-binary-code-matrix-background-with-digits-well-organized.jpg?s=612x612&w=0&k=20&c=IQcdedY8fn_DMq6nwc5MaHUBe0H0d5DPyibHR8J2usk=');
+    height: 100px;
+}
+
+.wellcome-banner h1{
+    color: white;
+    text-align: center;
+    margin-top: 0px;  
+}
+
+.caja-imagen{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+}
+
+img{
+  border-radius: 5px;
+}
+
+.h1-perfil{
+  display: flex;
+  justify-content: center;
+}
+
+.p-perfil{
+  display: flex;
+  justify-content: center;
+
+}
+
+.content-area{
+    
+
+    // margin: 15px;
+    padding: 15px;  
+}
+.profile-area{
+  background-color: #6C757D;
+  border-radius: 15px;
+  width: auto;
+  display: flex;
+  margin-bottom: 15px;
+
+  
+    h1{
+        font-size: 16px;
+        font-weight: bold;
+        padding: 5px;
+        color: white;
+        
+
+    }
+    p{
+        font-size: 10px;
+        padding: 5px;
+        font-weight: bold;
+    }
+
+
+    img{
+      
+        width: 40%;   
+        margin: 10px;
+    }  
+}
+.profile-detail{
+  text-align: left;
+  align-items: center;
+  margin: 15px;
+  color: white;
+  
+}
+.pic{
+  width:100px;
+  
+  img{
+    width: 100px;
+    border-radius: 15px;
+  }
+}
+
+
+.edit-area{
+
+    background-color: #6C757D;;
+
+    border-radius: 15px;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    
+}
+
+.edit-profile{
+    width: auto;
+    color: white;
+    margin-bottom: 15px;
+}
+
+
+.text-profile p{
+    margin-right: 5px;
+}
+
+
+.projects-area{
+    background-color: #6C757D;
+    border-radius: 15px;
+    
+    height: 400px;
+    margin: 20px;
+    }
+   
+/*listado proyectos*/
+
+.list-section{
+    display: inline-block;
+    
+    flex-wrap: wrap;
+    background-color: #212529 ;
+    
+  }
+  
+  .padre{  
+    border-radius: 1rem;
+    margin: 1rem;
+    width: auto;
+    height: auto;
+    background: #6C757D;
+    
+    display: flex;
+   
+   h5{
+    font-weight: 400;
+    color: aliceblue;
+   }
+  
+  .profesion{
+    font-size: 0.9rem;
+    color: aliceblue;
+  }
+  
+ 
+  }
+  
+  .box-texto{
+    
+    padding-top:1rem;
+  
+  }
+  
+  .titulo{
+  
+    font-weight: 200;
+  }
+  
+  .numero{
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+  
+   
+  }
+  .fotoPerfil{
+    width: 12rem;
+    margin: 1rem;
+    border-radius: 0.7rem;
+  }
+  
+  // .mini-box{
+  // height: 4rem;
+  //   width: 6rem;
+  //   border-radius: 0.5rem;
+  //   background-color: rgb(222, 9, 9);
+  //   display: flex;
+  //   gap:30px;
+  //  }
+  
+  
+  
+  .box-button{
+    padding-top: 1.1rem;
+    
+  }
+  
+   button{
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.3rem;
+    border: 0.1rem solid #FFC107;
+    background: transparent;
+    color: #FFC107;
+   }
+  
+   button:hover{
+    background-color: #FFC107;
+    color: black;
+   }
+.padre .texto .box-texto{
+  margin-right: 3px;
+}
+
+.list-section .title-projects h1{
+  color: white;
+  margin-left: 15px;
+  
+ } 
+.edite-button{
+  margin-bottom: 15px;
+  
+}
+.button-edit{
+  margin-top: 15px;
+  font-size: 14px;
+}
+  
+  
+  
+

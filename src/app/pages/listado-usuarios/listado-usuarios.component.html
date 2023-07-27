@@ -1,0 +1,16 @@
+<div class="list-section">
+  <div *ngFor="let item of userProfileList" class="padre">
+    <div class="box-foto">
+      <img class="fotoPerfil" [src]="item.imagen" alt={{item.name}}>
+    </div>
+    <div class="texto">
+      <div class="box-texto">
+        <h5>{{item.name}} {{item.lastname}}</h5>
+        <p class="profesion">Full Stack Developer Junior</p>
+      </div>
+      <div class="box-button">
+        <button routerLink="/detalle-usuario/{{item._id}}">Ver perfil</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,83 @@
+.maquina-escribir {
+  text-align: center;
+  display: block;
+  font-family: 'Press Start 2P', cursive;
+  white-space: nowrap; /* los espacios en blanco no rompen la línea */        
+  width: 80ch; /* el ancho será el número de caracteres que tiene nuestra línea */
+  animation: escribiendo 3s steps(30) infinite alternate;          
+  overflow: hidden;
+  color:black;
+}
+
+.cursor{
+  animation: 0.6s parpadeo-cursor infinite;
+}
+
+@keyframes escribiendo {
+  from { width: 100% }
+  to { width:0 }
+}
+
+@keyframes parpadeo-cursor {
+  50% {
+    opacity: 0;
+  }
+}
+
+
+.rounded-t-5 {
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
+    }
+
+@media (min-width: 992px) {
+      .rounded-tr-lg-0 {
+        border-top-right-radius: 0;
+      }
+
+    .rounded-bl-lg-5 {
+        border-bottom-left-radius: 0.5rem;
+      }
+    }
+
+    button{
+    text-align:center;
+    text-decoration: none;
+    display:inline-block;
+    color: black;
+    background-color: #FFC107;
+    padding: 10px 50px;
+    white-space: nowrap;
+    justify-content: center;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin: 10px 5px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.col-lg-8{
+   background: linear-gradient(to right, transparent, rgb(43, 41, 41)),
+}
+
+.col{
+  color: black;
+}
+
+.form-check-label{
+  color: black;
+  list-style: none;
+}
+.form-check-input{
+  color: black;
+}
+
+
+
+
+
+ 

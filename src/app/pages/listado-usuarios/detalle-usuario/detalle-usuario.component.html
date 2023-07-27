@@ -1,0 +1,25 @@
+<div class="caja">
+    <div class="padre">
+        <div class="foto">
+            <img class="fotoPerfil"
+                [src]="userProfileData.imagen"
+                alt={{userProfileData.name}}>
+        </div>
+        <div class="box-nombre">
+            <h5>{{userProfileData.name}} {{userProfileData.lastname}}</h5>
+        </div>
+        <div class="profesion">
+            <p class="profesion">Full Stack Developer Junior</p>
+        </div>
+        <div class="email">
+            <p class="email">{{userProfileData.email}}</p>
+        </div>
+        <div class="box-description">
+            <p class="descripcion">{{userProfileData.description}} </p>
+        </div>
+        <div class="botones">
+            <button class="boton"><a href="{{userProfileData.enlaceGit}}" target="_blank">Git</a> </button>
+            <button class="boton"><a href="{{userProfileData.enlaceLinkedin}}" target="_blank">Linkedin</a></button>
+        </div>
+    </div>
+</div>
